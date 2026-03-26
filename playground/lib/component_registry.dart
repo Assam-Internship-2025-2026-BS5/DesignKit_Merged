@@ -596,7 +596,7 @@ final List<ComponentMetadata> componentRegistry = [
         borderRadius: (props['borderRadius'] as num?)?.toDouble() ?? 20.0,
         tintColor: props['tintColor'] ?? const Color(0xFF3B82F6),
         child: (props['showTitle'] ?? true)
-            ? Center(
+            ? const Center(
                 child: dk.Text(
                     text: 'Glass Card', fontSize: 20.0, color: Colors.black),
               )
@@ -620,8 +620,8 @@ final List<ComponentMetadata> componentRegistry = [
         opacity: (props['opacity'] as num?)?.toDouble() ?? 0.1,
         borderRadius: BorderRadius.circular(
             (props['borderRadius'] as num?)?.toDouble() ?? 20.0),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
+        child: const Padding(
+          padding: EdgeInsets.all(16),
           child: dk.Text(text: 'Glass Container', fontSize: 18.0, color: Colors.black),
         ),
       );
@@ -865,48 +865,48 @@ final List<ComponentMetadata> componentRegistry = [
     },
   ),
 
-  ComponentMetadata(
-    name: 'Radio Button',
-    category: 'Atoms',
-    platform: ComponentPlatform.web,
-    defaultProps: {
-      'label': 'Radio Option',
-      'value': true,
-      'size': 'Medium',
-      'activeColor': const Color(0xFF1E1E4C),
-      'labelColor': Colors.black87,
-      'fontWeight': FontWeight.normal,
-      'disabled': false,
-      'xOffset': 0.0,
-      'yOffset': 0.0,
-    },
-    options: {'size': ['Small', 'Medium', 'Large']},
-    builder: (props, {bool isFullScreen = false, VoidCallback? onUpdate}) {
-      final size = props['size'] ?? 'Medium';
-      double fontSize = size == 'Small' ? 28.0 : size == 'Large' ? 50.0 : 40.0;
-      return StatefulBuilder(
-        builder: (context, setState) {
-          return dk.RadioButton(
-            label: props['label'] ?? 'Radio Option',
-            value: props['value'] ?? false,
-            fontSize: fontSize,
-            fontWeight: props['fontWeight'] ?? FontWeight.normal,
-            activeColor: props['activeColor'] ?? const Color(0xFF1E1E4C),
-            labelColor: props['labelColor'] ?? Colors.black87,
-            offset: Offset(
-              (props['xOffset'] as num?)?.toDouble() ?? 0.0,
-              -((props['yOffset'] as num?)?.toDouble() ?? 0.0),
-            ),
-            disabled: props['disabled'] ?? false,
-            onChanged: (val) {
-              setState(() => props['value'] = val);
-              onUpdate?.call();
-            },
-          );
-        },
-      );
-    },
-  ),
+  // ComponentMetadata(
+  //   name: 'Radio Button',
+  //   category: 'Atoms',
+  //   platform: ComponentPlatform.web,
+  //   defaultProps: {
+  //     'label': 'Radio Option',
+  //     'value': true,
+  //     'size': 'Medium',
+  //     'activeColor': const Color(0xFF1E1E4C),
+  //     'labelColor': Colors.black87,
+  //     'fontWeight': FontWeight.normal,
+  //     'disabled': false,
+  //     'xOffset': 0.0,
+  //     'yOffset': 0.0,
+  //   },
+  //   options: {'size': ['Small', 'Medium', 'Large']},
+  //   builder: (props, {bool isFullScreen = false, VoidCallback? onUpdate}) {
+  //     final size = props['size'] ?? 'Medium';
+  //     double fontSize = size == 'Small' ? 28.0 : size == 'Large' ? 50.0 : 40.0;
+  //     return StatefulBuilder(
+  //       builder: (context, setState) {
+  //         return dk.RadioButton(
+  //           label: props['label'] ?? 'Radio Option',
+  //           value: props['value'] ?? false,
+  //           fontSize: fontSize,
+  //           fontWeight: props['fontWeight'] ?? FontWeight.normal,
+  //           activeColor: props['activeColor'] ?? const Color(0xFF1E1E4C),
+  //           labelColor: props['labelColor'] ?? Colors.black87,
+  //           offset: Offset(
+  //             (props['xOffset'] as num?)?.toDouble() ?? 0.0,
+  //             -((props['yOffset'] as num?)?.toDouble() ?? 0.0),
+  //           ),
+  //           disabled: props['disabled'] ?? false,
+  //           onChanged: (val) {
+  //             setState(() => props['value'] = val);
+  //             onUpdate?.call();
+  //           },
+  //         );
+  //       },
+  //     );
+  //   },
+  // ),
 
   ComponentMetadata(
     name: 'Toggle Switch',

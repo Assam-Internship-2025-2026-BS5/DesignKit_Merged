@@ -1021,7 +1021,9 @@ class _PlaygroundScreenState extends State<PlaygroundScreen> {
         lower.contains('checkbox') ||
         lower.contains('toggle') ||
         lower.contains('switch') ||
-        lower.contains('field')) return 1.5;
+        lower.contains('field')) {
+      return 1.5;
+    }
     return 1.2;
   }
 

@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Unified FGFC Design Kit (local path)
+  # Unified Design Kit (local path)
   designkit:
     path: ../designkit
 
