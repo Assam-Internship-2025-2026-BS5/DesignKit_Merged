@@ -908,48 +908,48 @@ final List<ComponentMetadata> componentRegistry = [
   //   },
   // ),
 
-  ComponentMetadata(
-    name: 'Toggle Switch',
-    category: 'Atoms',
-    platform: ComponentPlatform.web,
-    defaultProps: {
-      'label': 'Enable Notifications',
-      'value': false,
-      'size': 'Medium',
-      'labelColor': Colors.black87,
-      'fontWeight': FontWeight.normal,
-      'disabled': false,
-      'xOffset': 0.0,
-      'yOffset': 0.0,
-    },
-    options: {'size': ['Small', 'Medium', 'Large']},
-    builder: (props, {bool isFullScreen = false, VoidCallback? onUpdate}) {
-      final sizeOpt = props['size'] ?? 'Medium';
-      double componentSize = sizeOpt == 'Small' ? 0.7 : sizeOpt == 'Large' ? 1.4 : 1.0;
-      return StatefulBuilder(
-        builder: (context, setState) {
-          return dk.ToggleSwitch(
-            label: props['label'],
-            value: props['value'] ?? false,
-            size: componentSize,
-            fontSize: 30.0,
-            fontWeight: props['fontWeight'] ?? FontWeight.normal,
-            disabled: props['disabled'] ?? false,
-            activeColor: props['activeColor'] ?? const Color(0xFF1E1E4C),
-            labelColor: props['labelColor'] ?? Colors.black87,
-            offset: Offset(
-              (props['xOffset'] as num?)?.toDouble() ?? 0.0,
-              -((props['yOffset'] as num?)?.toDouble() ?? 0.0),
-            ),
-            onChanged: (val) {
-              setState(() => props['value'] = val);
-              onUpdate?.call();
-            },
-          );
-        },
-      );
-    },
-  ),
+  // ComponentMetadata(
+  //   name: 'Toggle Switch',
+  //   category: 'Atoms',
+  //   platform: ComponentPlatform.web,
+  //   defaultProps: {
+  //     'label': 'Enable Notifications',
+  //     'value': false,
+  //     'size': 'Medium',
+  //     'labelColor': Colors.black87,
+  //     'fontWeight': FontWeight.normal,
+  //     'disabled': false,
+  //     'xOffset': 0.0,
+  //     'yOffset': 0.0,
+  //   },
+  //   options: {'size': ['Small', 'Medium', 'Large']},
+  //   builder: (props, {bool isFullScreen = false, VoidCallback? onUpdate}) {
+  //     final sizeOpt = props['size'] ?? 'Medium';
+  //     double componentSize = sizeOpt == 'Small' ? 0.7 : sizeOpt == 'Large' ? 1.4 : 1.0;
+  //     return StatefulBuilder(
+  //       builder: (context, setState) {
+  //         return dk.ToggleSwitch(
+  //           label: props['label'],
+  //           value: props['value'] ?? false,
+  //           size: componentSize,
+  //           fontSize: 30.0,
+  //           fontWeight: props['fontWeight'] ?? FontWeight.normal,
+  //           disabled: props['disabled'] ?? false,
+  //           activeColor: props['activeColor'] ?? const Color(0xFF1E1E4C),
+  //           labelColor: props['labelColor'] ?? Colors.black87,
+  //           offset: Offset(
+  //             (props['xOffset'] as num?)?.toDouble() ?? 0.0,
+  //             -((props['yOffset'] as num?)?.toDouble() ?? 0.0),
+  //           ),
+  //           onChanged: (val) {
+  //             setState(() => props['value'] = val);
+  //             onUpdate?.call();
+  //           },
+  //         );
+  //       },
+  //     );
+  //   },
+  // ),
 
   ComponentMetadata(
     name: 'Image',
