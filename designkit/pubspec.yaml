@@ -1,0 +1,35 @@
+name: designkit
+description: "FGFC Bank Unified Design Kit – combines Mobile (BS05) and Web (BS06) teams"
+publish_to: 'none'
+version: 2.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    # Shared brand assets (high-quality BS06 versions)
+    - assets/hdfc_logo.png
+    - assets/right_back.png
+    # Web team assets (BS06)
+    - assets/left_image.png
+    - assets/lock.png
+    - assets/now_logo.png
+    - assets/qr_login.png
+    # Mobile team assets (BS05)
+    - assets/Qr_scan.png
+    - assets/Icon.png
+    - assets/Send_money.png
+    - assets/Pay_bills.png
+    - assets/Product_services.png
