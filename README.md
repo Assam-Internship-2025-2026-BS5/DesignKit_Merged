@@ -1,2 +1,3 @@
-# DesignKit_Merged
-This is a temporary and for testing merged repository of BS05 & BS06 of the designkit mobile and desktop version 
+## DesignKit_Merged
+# This is a temporary and for testing, merged repository of BS05 & BS06 of the designkit (mobile and desktop) version
+   -done by BS05 group for Demo and Testing
