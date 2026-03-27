@@ -1,3 +1,3 @@
-## DesignKit_Merged
-# This is a temporary and for testing, merged repository of BS05 & BS06 of the designkit (mobile and desktop) version
-   -done by BS05 group for Demo and Testing
+# Flutter ADK-DesignKit
+# This is for testing, Merged repository of BS05 & BS06 designkit (mobile and desktop) version
+   -done by BS5 group for Demo and Testing
